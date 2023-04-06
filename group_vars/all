@@ -3,10 +3,10 @@
 utils:
     - archlinux-keyring
     - base-devel
-    - htop
     - neovim
     - npm
     - yarn
     - rust
     - php
     - yay
+    - cargo
