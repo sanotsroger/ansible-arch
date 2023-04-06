@@ -1,0 +1,3 @@
+- name: Export source cargo
+  ansible.builtin.command: source ~/.zshrc
+  register: Export Source Cargo

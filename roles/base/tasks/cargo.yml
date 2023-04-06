@@ -1,0 +1,6 @@
+---
+- name: Export path cargo
+  lineinfile:
+    path: ~/.zshrc
+    line: export PATH=$HOME/.cargo/bin:$HOME/.local/bin:$PATH
+    create: yes

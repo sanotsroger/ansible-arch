@@ -14,3 +14,7 @@
   pacman:
     name: "{{ utils }}"
     state: present
+
+- name: Export path cargo
+  import_tasks: cargo.yml
+  notify: Export Source Cargo
