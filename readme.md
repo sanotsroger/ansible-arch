@@ -3,5 +3,5 @@
 Execute
 
 ```bash
-ansible-playbook playbook.yml
+sudo ansible-playbook playbook.yml
 ```

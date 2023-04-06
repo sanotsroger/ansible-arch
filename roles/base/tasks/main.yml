@@ -1,11 +1,13 @@
 ---
+- name: Configure pacman.conf
+  import_tasks: pacman_conf.yml
+
 - name: Update cache and upgrade
   become: true
   pacman:
     update_cache: true
     upgrade: true
-    upgrade_extra_args: --noconfirm
-  
+    upgrade_extra_args: --noconfirm  
 
 - name: Install Utils
   become: true

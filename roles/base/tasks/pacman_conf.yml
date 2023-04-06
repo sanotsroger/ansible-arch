@@ -1,0 +1,13 @@
+---
+- name: Update pacman.conf settings
+  lineinfile:
+    path: /etc/pacman.conf
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    insertafter: '^(.*)ParallelDownloads(.*)'
+  loop:
+    - { regexp: '^#Color', line: 'Color'}
+    - { regexp: '^#VerbosePkgLists', line: 'VerbosePkgLists'}
+    - { regexp: '^#NoProgressBar', line: 'NoProgressBar'}
+    - { regexp: '^(.*)ParallelDownloads(.*)', line: 'ParallelDownloads = 10'}
+    - { regexp: '^(.*)ILoveCandy(.*)', line: 'ILoveCandy'}
