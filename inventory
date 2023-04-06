@@ -1,0 +1,14 @@
+# ############################ Hosts ############################ #
+# localhost machine
+[localhost]
+127.0.0.1
+
+# ########################## Variables ########################## #
+# all host variables
+[all:vars]
+ansible_python_interpreter = /usr/bin/python3
+
+
+# localhost machine variables
+[localhost:vars]
+ansible_connection = local
